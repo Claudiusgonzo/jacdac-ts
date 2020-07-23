@@ -12,13 +12,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../jacdac-spec/`,
-        name: `spec`,
-      },
-    },    
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `spec`,
         path: `${__dirname}/../jacdac-spec/dist/spec.json`,
       },
@@ -51,6 +44,7 @@ module.exports = {
           default: require.resolve("./src/components/layout.tsx"),
         },
         gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`
         ]
       },
