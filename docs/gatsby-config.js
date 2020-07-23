@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../jacdac-spec/**.md`,
-        name: `services`,
+        path: `${__dirname}/../jacdac-spec/`,
+        name: `spec`,
       },
     },    
     {
