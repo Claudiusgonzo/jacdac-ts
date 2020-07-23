@@ -12,15 +12,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/../jacdac-spec/**.md`,
+        name: `services`,
       },
-    },
+    },    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `spec`,
         path: `${__dirname}/../jacdac-spec/dist/spec.json`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -59,6 +66,7 @@ module.exports = {
               rel: "nofollow"
             }
           },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`
         ],
       },
